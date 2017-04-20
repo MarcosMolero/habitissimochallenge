@@ -12,7 +12,12 @@ class NewBudgetVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let wsc:WebServiceCommunication = WebServiceCommunication()
+//        wsc.getCategories()
+//        wsc.getSubcategory("001-1")
+//        wsc.getLocations()
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -7,19 +7,74 @@
 //
 
 import Foundation
+import Alamofire
+import SwiftyJSON
+
+let connectionFailure   :String = "com.marcosmolero.connectionFailure"
 
 class WebServiceCommunication {
     
     func getCategories() {
+        let url         :URL = URL(string: AppConstants.appConnection.WS_URL_CATEGORY)!
         
+        Alamofire.request(url)
+            .validate()
+            .responseString { response in
+                switch response.result {
+                case .success:
+                    if ((response.response?.statusCode)! >= 200 && (response.response?.statusCode)! < 300) {
+                        let jsonObject = JSON(data: response.data!)
+                        print(jsonObject)
+                    }
+                    break
+                case .failure(let error):
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: connectionFailure), object: self)
+                    print(error)
+                    break
+                }
+        }
     }
     
-    func getSubcategory(_id:String) {
+    func getSubcategory(_ id:String) {
+        let url         :URL = URL(string: AppConstants.appConnection.WS_URL_CATEGORY + "\(id)")!
         
+        Alamofire.request(url)
+            .validate()
+            .responseString { response in
+                switch response.result {
+                case .success:
+                    if ((response.response?.statusCode)! >= 200 && (response.response?.statusCode)! < 300) {
+                        let jsonObject = JSON(data: response.data!)
+                        print(jsonObject)
+                    }
+                    break
+                case .failure(let error):
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: connectionFailure), object: self)
+                    print(error)
+                    break
+                }
+        }
     }
     
     func getLocations() {
+        let url         :URL = URL(string: AppConstants.appConnection.WS_URL_LOCATIONS)!
         
+        Alamofire.request(url)
+            .validate()
+            .responseString { response in
+                switch response.result {
+                case .success:
+                    if ((response.response?.statusCode)! >= 200 && (response.response?.statusCode)! < 300) {
+                        let jsonObject = JSON(data: response.data!)
+                        print(jsonObject)
+                    }
+                    break
+                case .failure(let error):
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: connectionFailure), object: self)
+                    print(error)
+                    break
+                }
+        }
     }
     
 }
