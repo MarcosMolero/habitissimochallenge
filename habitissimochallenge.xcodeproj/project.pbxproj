@@ -13,6 +13,9 @@
 		36478F281EA8923E00F411A8 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36478F271EA8923E00F411A8 /* AppConstants.swift */; };
 		36478F2C1EA8931B00F411A8 /* AppSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36478F2B1EA8931B00F411A8 /* AppSingleton.swift */; };
 		36478F2E1EA8935800F411A8 /* WebServiceCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36478F2D1EA8935800F411A8 /* WebServiceCommunication.swift */; };
+		36478F321EA894BF00F411A8 /* BudgetDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36478F311EA894BF00F411A8 /* BudgetDAO.swift */; };
+		36478F341EA894CB00F411A8 /* CategoryDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36478F331EA894CB00F411A8 /* CategoryDAO.swift */; };
+		36478F361EA894D600F411A8 /* LocationsDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36478F351EA894D600F411A8 /* LocationsDAO.swift */; };
 		367E8D191EA88BA00083DE62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367E8D181EA88BA00083DE62 /* AppDelegate.swift */; };
 		367E8D1B1EA88BA00083DE62 /* BudgetsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367E8D1A1EA88BA00083DE62 /* BudgetsVC.swift */; };
 		367E8D1D1EA88BA00083DE62 /* NewBudgetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367E8D1C1EA88BA00083DE62 /* NewBudgetVC.swift */; };
@@ -28,6 +31,9 @@
 		36478F271EA8923E00F411A8 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		36478F2B1EA8931B00F411A8 /* AppSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSingleton.swift; sourceTree = "<group>"; };
 		36478F2D1EA8935800F411A8 /* WebServiceCommunication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceCommunication.swift; sourceTree = "<group>"; };
+		36478F311EA894BF00F411A8 /* BudgetDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetDAO.swift; sourceTree = "<group>"; };
+		36478F331EA894CB00F411A8 /* CategoryDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDAO.swift; sourceTree = "<group>"; };
+		36478F351EA894D600F411A8 /* LocationsDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDAO.swift; sourceTree = "<group>"; };
 		367E8D151EA88BA00083DE62 /* habitissimochallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = habitissimochallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		367E8D181EA88BA00083DE62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		367E8D1A1EA88BA00083DE62 /* BudgetsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetsVC.swift; sourceTree = "<group>"; };
@@ -69,9 +75,10 @@
 		36478F1E1EA88F8700F411A8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				36478F2F1EA893FC00F411A8 /* DB */,
 				36478F2A1EA8930E00F411A8 /* Singelton */,
 				36478F291EA892F700F411A8 /* ClassModelDB */,
+				36478F301EA8949800F411A8 /* DAO */,
+				36478F2F1EA893FC00F411A8 /* DB */,
 				36478F2D1EA8935800F411A8 /* WebServiceCommunication.swift */,
 			);
 			name = Model;
@@ -117,6 +124,16 @@
 			children = (
 			);
 			name = DB;
+			sourceTree = "<group>";
+		};
+		36478F301EA8949800F411A8 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				36478F311EA894BF00F411A8 /* BudgetDAO.swift */,
+				36478F331EA894CB00F411A8 /* CategoryDAO.swift */,
+				36478F351EA894D600F411A8 /* LocationsDAO.swift */,
+			);
+			name = DAO;
 			sourceTree = "<group>";
 		};
 		367E8D0C1EA88BA00083DE62 = {
@@ -221,9 +238,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36478F341EA894CB00F411A8 /* CategoryDAO.swift in Sources */,
+				36478F361EA894D600F411A8 /* LocationsDAO.swift in Sources */,
 				36478F251EA8915E00F411A8 /* Locations.swift in Sources */,
 				36478F2C1EA8931B00F411A8 /* AppSingleton.swift in Sources */,
 				36478F2E1EA8935800F411A8 /* WebServiceCommunication.swift in Sources */,
+				36478F321EA894BF00F411A8 /* BudgetDAO.swift in Sources */,
 				367E8D1D1EA88BA00083DE62 /* NewBudgetVC.swift in Sources */,
 				36478F231EA8909C00F411A8 /* Category.swift in Sources */,
 				367E8D191EA88BA00083DE62 /* AppDelegate.swift in Sources */,
