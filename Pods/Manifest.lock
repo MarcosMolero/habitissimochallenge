@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (4.4.0)
+  - FMDB/FTS (2.6.2):
+    - FMDB/standard
+  - FMDB/standard (2.6.2)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4)
+  - FMDB/FTS
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: 9ef9a9f2a02da2ee40a460b45f89a3ac99fc238e
+
+COCOAPODS: 1.1.1

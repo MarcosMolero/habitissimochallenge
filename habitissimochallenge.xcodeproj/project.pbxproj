@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D94E6F2DEA27437551C8FF8 /* Pods_habitissimochallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 998F98CC97EDD2DC8D47D317 /* Pods_habitissimochallenge.framework */; };
 		36478F211EA88FC500F411A8 /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36478F201EA88FC500F411A8 /* Budget.swift */; };
 		36478F231EA8909C00F411A8 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36478F221EA8909C00F411A8 /* Category.swift */; };
 		36478F251EA8915E00F411A8 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36478F241EA8915E00F411A8 /* Locations.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30400289108E75FA7D304497 /* Pods-habitissimochallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-habitissimochallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-habitissimochallenge/Pods-habitissimochallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		36478F201EA88FC500F411A8 /* Budget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
 		36478F221EA8909C00F411A8 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		36478F241EA8915E00F411A8 /* Locations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
@@ -42,6 +44,8 @@
 		367E8D211EA88BA00083DE62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		367E8D241EA88BA00083DE62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		367E8D261EA88BA00083DE62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56102B726F0F538206343938 /* Pods-habitissimochallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-habitissimochallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-habitissimochallenge/Pods-habitissimochallenge.release.xcconfig"; sourceTree = "<group>"; };
+		998F98CC97EDD2DC8D47D317 /* Pods_habitissimochallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_habitissimochallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,12 +53,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D94E6F2DEA27437551C8FF8 /* Pods_habitissimochallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A7DFB9E6A6AA7ACABE8DC17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				998F98CC97EDD2DC8D47D317 /* Pods_habitissimochallenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2AD31EC8B0F25B2C89CA954B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				30400289108E75FA7D304497 /* Pods-habitissimochallenge.debug.xcconfig */,
+				56102B726F0F538206343938 /* Pods-habitissimochallenge.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		36478F1C1EA88F7B00F411A8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +163,8 @@
 			children = (
 				367E8D171EA88BA00083DE62 /* habitissimochallenge */,
 				367E8D161EA88BA00083DE62 /* Products */,
+				2AD31EC8B0F25B2C89CA954B /* Pods */,
+				0A7DFB9E6A6AA7ACABE8DC17 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,9 +197,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 367E8D291EA88BA00083DE62 /* Build configuration list for PBXNativeTarget "habitissimochallenge" */;
 			buildPhases = (
+				8F16298A3FC9617563D39747 /* [CP] Check Pods Manifest.lock */,
 				367E8D111EA88BA00083DE62 /* Sources */,
 				367E8D121EA88BA00083DE62 /* Frameworks */,
 				367E8D131EA88BA00083DE62 /* Resources */,
+				545F7299F18E9D8AFAAEB7C3 /* [CP] Embed Pods Frameworks */,
+				EA75ADF4AF83C51DE208638E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,6 +259,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		545F7299F18E9D8AFAAEB7C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-habitissimochallenge/Pods-habitissimochallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F16298A3FC9617563D39747 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EA75ADF4AF83C51DE208638E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-habitissimochallenge/Pods-habitissimochallenge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		367E8D111EA88BA00083DE62 /* Sources */ = {
@@ -370,6 +445,7 @@
 		};
 		367E8D2A1EA88BA00083DE62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30400289108E75FA7D304497 /* Pods-habitissimochallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = habitissimochallenge/Info.plist;
@@ -383,6 +459,7 @@
 		};
 		367E8D2B1EA88BA00083DE62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56102B726F0F538206343938 /* Pods-habitissimochallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = habitissimochallenge/Info.plist;
