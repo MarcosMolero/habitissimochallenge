@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  NewBudgetVC.swift
 //  habitissimochallenge
 //
 //  Created by Marcos Molero on 20/4/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class NewBudgetVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

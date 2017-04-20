@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  BudgetsVC.swift
 //  habitissimochallenge
 //
 //  Created by Marcos Molero on 20/4/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class BudgetsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
