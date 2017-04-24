@@ -10,6 +10,17 @@ import Foundation
 
 class AppConstants {
     
+    struct DBHelper {
+        static let TABLE_BUDGETS    :String = "BUDGETS"
+        static let description      :String = "description"
+        static let subcategory      :String = "subcategory"
+        static let name             :String = "name"
+        static let email            :String = "email"
+        static let phone            :String = "phone"
+        static let location         :String = "location"
+        
+    }
+    
     struct appDatabase {
         static let LocalDatabaseNew :String = "habitissimoDB.sqlite"
         

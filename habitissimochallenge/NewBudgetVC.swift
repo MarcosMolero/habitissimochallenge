@@ -74,6 +74,18 @@ class NewBudgetVC: UIViewController {
             print("Not valid")
         }
         
+        
+        let budget:Budget   = Budget()
+        budget.description  = descriptionField.text!
+        budget.subcategory  = subcategoryField.text!
+        budget.name         = nameField.text!
+        budget.email        = emailField.text!
+        budget.phone        = phoneField.text!
+        budget.localization = locationField.text!
+        
+        let instanceAppSingleton = AppSingleton.sharedInstance
+        instanceAppSingleton.budget = budget
+        
     }
     
     @IBAction func dismissKeyboard(_ sender: Any) {

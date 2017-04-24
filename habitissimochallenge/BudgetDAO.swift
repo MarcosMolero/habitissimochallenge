@@ -23,7 +23,7 @@ class BudgetDAO: NSObject {
     }
     
     func insertBudget(_ budget:Budget) {
-        let query:String = ""
+        let query   :String = "INSERT INTO \(AppConstants.DBHelper.TABLE_BUDGETS) (\(AppConstants.DBHelper.description),\(AppConstants.DBHelper.subcategory),\(AppConstants.DBHelper.name),\(AppConstants.DBHelper.email),\(AppConstants.DBHelper.phone),\(AppConstants.DBHelper.location),) VALUES ('\(budget.description)','\(budget.subcategory)','\(budget.name)','\(budget.email)','\(budget.phone)','\(budget.localization)')"
         sharedInstanceBudget.database!.open()
         sharedInstanceBudget.database!.executeUpdate(query, withArgumentsIn: nil)
         sharedInstanceBudget.database!.close()
