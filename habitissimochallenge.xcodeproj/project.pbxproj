@@ -18,6 +18,7 @@
 		36478F341EA894CB00F411A8 /* CategoryDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36478F331EA894CB00F411A8 /* CategoryDAO.swift */; };
 		36478F361EA894D600F411A8 /* LocationsDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36478F351EA894D600F411A8 /* LocationsDAO.swift */; };
 		367B62611EAE1A430066876E /* UtilValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367B62601EAE1A430066876E /* UtilValidation.swift */; };
+		367B62631EAE23B60066876E /* UtilFileManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367B62621EAE23B60066876E /* UtilFileManagement.swift */; };
 		367E8D191EA88BA00083DE62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367E8D181EA88BA00083DE62 /* AppDelegate.swift */; };
 		367E8D1B1EA88BA00083DE62 /* BudgetsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367E8D1A1EA88BA00083DE62 /* BudgetsVC.swift */; };
 		367E8D1D1EA88BA00083DE62 /* NewBudgetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367E8D1C1EA88BA00083DE62 /* NewBudgetVC.swift */; };
@@ -38,6 +39,7 @@
 		36478F331EA894CB00F411A8 /* CategoryDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDAO.swift; sourceTree = "<group>"; };
 		36478F351EA894D600F411A8 /* LocationsDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDAO.swift; sourceTree = "<group>"; };
 		367B62601EAE1A430066876E /* UtilValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilValidation.swift; sourceTree = "<group>"; };
+		367B62621EAE23B60066876E /* UtilFileManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilFileManagement.swift; sourceTree = "<group>"; };
 		367E8D151EA88BA00083DE62 /* habitissimochallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = habitissimochallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		367E8D181EA88BA00083DE62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		367E8D1A1EA88BA00083DE62 /* BudgetsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetsVC.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			children = (
 				36478F271EA8923E00F411A8 /* AppConstants.swift */,
 				367B62601EAE1A430066876E /* UtilValidation.swift */,
+				367B62621EAE23B60066876E /* UtilFileManagement.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			files = (
 				36478F341EA894CB00F411A8 /* CategoryDAO.swift in Sources */,
 				36478F361EA894D600F411A8 /* LocationsDAO.swift in Sources */,
+				367B62631EAE23B60066876E /* UtilFileManagement.swift in Sources */,
 				36478F251EA8915E00F411A8 /* Locations.swift in Sources */,
 				36478F2C1EA8931B00F411A8 /* AppSingleton.swift in Sources */,
 				36478F2E1EA8935800F411A8 /* WebServiceCommunication.swift in Sources */,

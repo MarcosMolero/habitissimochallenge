@@ -7,9 +7,18 @@
 //
 
 import Foundation
+import FMDB
 
 let sharedInstanceLocations = LocationsDAO()
 
 class LocationsDAO: NSObject {
-
+    
+    var database: FMDatabase? = nil
+    
+    class var instance: LocationsDAO {
+        let myPath                          = UtilFileManagement.getPath(AppConstants.appDatabase.LocalDatabaseNew)
+        sharedInstanceLocations.database    = FMDatabase(path: myPath)
+        
+        return sharedInstanceLocations
+    }
 }

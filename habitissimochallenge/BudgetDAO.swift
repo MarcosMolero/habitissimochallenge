@@ -7,9 +7,27 @@
 //
 
 import Foundation
+import FMDB
 
 let sharedInstanceBudget = BudgetDAO()
 
 class BudgetDAO: NSObject {
+    
+    var database: FMDatabase? = nil
+    
+    class var instance: BudgetDAO {
+        let myPath                      = UtilFileManagement.getPath(AppConstants.appDatabase.LocalDatabaseNew)
+        sharedInstanceBudget.database   = FMDatabase(path: myPath)
+        
+        return sharedInstanceBudget
+    }
+    
+    func insertBudget(_ budget:Budget) {
+        let query:String = ""
+        sharedInstanceBudget.database!.open()
+        sharedInstanceBudget.database!.executeUpdate(query, withArgumentsIn: nil)
+        sharedInstanceBudget.database!.close()
+        print("insertBudget OK")
+    }
     
 }
