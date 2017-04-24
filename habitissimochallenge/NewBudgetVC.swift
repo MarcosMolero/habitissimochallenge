@@ -27,22 +27,52 @@ class NewBudgetVC: UIViewController {
     }
     
     @IBAction func cancelBudget(_ sender: Any) {
-        // Clear budget fields.
-        
-        nameField.text = ""
-        emailField.text = ""
-        phoneField.text = ""
-        descriptionField.text = ""
-        subcategoryField.text = ""
-        locationField.text = ""
-        
+        nameField.text          = ""
+        emailField.text         = ""
+        phoneField.text         = ""
+        descriptionField.text   = ""
+        subcategoryField.text   = ""
+        locationField.text      = ""
     }
 
     @IBAction func saveBudget(_ sender: Any) {
         // Save in DB.
         
+        if (nameField.text?.isEmpty)! {
+            print("This field can't be empty")
+        }
         
+        if (emailField.text?.isEmpty)! {
+            print("This field can't be empty")
+        }
         
+        if (phoneField.text?.isEmpty)! {
+            print("This field can't be empty")
+        }
+        
+        if (descriptionField.text?.isEmpty)! {
+            print("This field can't be empty")
+        }
+        
+        if (subcategoryField.text?.isEmpty)! {
+            print("This field can't be empty")
+        }
+        
+        if (locationField.text?.isEmpty)! {
+            print("This field can't be empty")
+        }
+        
+        if UtilValidation.fieldEmail(emailField.text!) {
+            print("Valid")
+        }else{
+            print("Not valid")
+        }
+        
+        if UtilValidation.fieldPhone(phoneField.text!) {
+            print("Valid")
+        }else{
+            print("Not valid")
+        }
         
     }
     
