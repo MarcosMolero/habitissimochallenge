@@ -31,13 +31,13 @@
 
 /* Begin PBXFileReference section */
 		30400289108E75FA7D304497 /* Pods-habitissimochallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-habitissimochallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-habitissimochallenge/Pods-habitissimochallenge.debug.xcconfig"; sourceTree = "<group>"; };
-		36478F201EA88FC500F411A8 /* Budget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
+		36478F201EA88FC500F411A8 /* Budget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Budget.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		36478F221EA8909C00F411A8 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		36478F241EA8915E00F411A8 /* Locations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		36478F271EA8923E00F411A8 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		36478F2B1EA8931B00F411A8 /* AppSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSingleton.swift; sourceTree = "<group>"; };
 		36478F2D1EA8935800F411A8 /* WebServiceCommunication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceCommunication.swift; sourceTree = "<group>"; };
-		36478F311EA894BF00F411A8 /* BudgetDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetDAO.swift; sourceTree = "<group>"; };
+		36478F311EA894BF00F411A8 /* BudgetDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BudgetDAO.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		36478F331EA894CB00F411A8 /* CategoryDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDAO.swift; sourceTree = "<group>"; };
 		36478F351EA894D600F411A8 /* LocationsDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDAO.swift; sourceTree = "<group>"; };
 		367B62601EAE1A430066876E /* UtilValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilValidation.swift; sourceTree = "<group>"; };
@@ -45,7 +45,7 @@
 		367E8D151EA88BA00083DE62 /* habitissimochallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = habitissimochallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		367E8D181EA88BA00083DE62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		367E8D1A1EA88BA00083DE62 /* BudgetsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetsVC.swift; sourceTree = "<group>"; };
-		367E8D1C1EA88BA00083DE62 /* NewBudgetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBudgetVC.swift; sourceTree = "<group>"; };
+		367E8D1C1EA88BA00083DE62 /* NewBudgetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = NewBudgetVC.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		367E8D1F1EA88BA00083DE62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		367E8D211EA88BA00083DE62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		367E8D241EA88BA00083DE62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };

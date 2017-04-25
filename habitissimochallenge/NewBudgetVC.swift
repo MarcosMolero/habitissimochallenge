@@ -75,13 +75,13 @@ class NewBudgetVC: UIViewController {
         }
         
         let instanceAppSingleton = AppSingleton.sharedInstance
-        instanceAppSingleton.budget.description  = descriptionField.text!
-        instanceAppSingleton.budget.subcategory  = subcategoryField.text!
-        instanceAppSingleton.budget.name         = nameField.text!
-        instanceAppSingleton.budget.email        = emailField.text!
-        instanceAppSingleton.budget.phone        = phoneField.text!
-        instanceAppSingleton.budget.localization = locationField.text!
-        instanceAppSingleton.budget.actual_date  = Int(NSDate().timeIntervalSince1970)
+        instanceAppSingleton.budget.description     = descriptionField.text!
+        instanceAppSingleton.budget.subcategory     = subcategoryField.text!
+        instanceAppSingleton.budget.name            = nameField.text!
+        instanceAppSingleton.budget.email           = emailField.text!
+        instanceAppSingleton.budget.phone           = phoneField.text!
+        instanceAppSingleton.budget.location        = locationField.text!
+        instanceAppSingleton.budget.actual_date     = Int(NSDate().timeIntervalSince1970)
         
         BudgetDAO.instance.insertBudget(instanceAppSingleton.budget)
     }

@@ -15,7 +15,7 @@ class Budget {
     var name            :String
     var email           :String
     var phone           :String
-    var localization    :String
+    var location        :String
     var actual_date     :Int
     
     init() {
@@ -25,7 +25,7 @@ class Budget {
         self.name           = String()
         self.email          = String()
         self.phone          = String()
-        self.localization   = String()
+        self.location       = String()
         self.actual_date    = Int()
         
     }
