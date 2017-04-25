@@ -27,6 +27,7 @@
 		367E8D251EA88BA00083DE62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 367E8D231EA88BA00083DE62 /* LaunchScreen.storyboard */; };
 		36B4BEEA1EAF2D3B00E98DAE /* database_v100_1.sql in Resources */ = {isa = PBXBuildFile; fileRef = 36B4BEE81EAF2D3B00E98DAE /* database_v100_1.sql */; };
 		36B4BEEB1EAF2D3B00E98DAE /* habitissimoDB_v100_1.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 36B4BEE91EAF2D3B00E98DAE /* habitissimoDB_v100_1.sqlite */; };
+		36B4BEED1EAF6AAD00E98DAE /* UtilAlertManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B4BEEC1EAF6AAD00E98DAE /* UtilAlertManagement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		367E8D261EA88BA00083DE62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36B4BEE81EAF2D3B00E98DAE /* database_v100_1.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = database_v100_1.sql; sourceTree = "<group>"; };
 		36B4BEE91EAF2D3B00E98DAE /* habitissimoDB_v100_1.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = habitissimoDB_v100_1.sqlite; sourceTree = "<group>"; };
+		36B4BEEC1EAF6AAD00E98DAE /* UtilAlertManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilAlertManagement.swift; sourceTree = "<group>"; };
 		56102B726F0F538206343938 /* Pods-habitissimochallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-habitissimochallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-habitissimochallenge/Pods-habitissimochallenge.release.xcconfig"; sourceTree = "<group>"; };
 		998F98CC97EDD2DC8D47D317 /* Pods_habitissimochallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_habitissimochallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -129,6 +131,7 @@
 				36478F271EA8923E00F411A8 /* AppConstants.swift */,
 				367B62601EAE1A430066876E /* UtilValidation.swift */,
 				367B62621EAE23B60066876E /* UtilFileManagement.swift */,
+				36B4BEEC1EAF6AAD00E98DAE /* UtilAlertManagement.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				367E8D1D1EA88BA00083DE62 /* NewBudgetVC.swift in Sources */,
 				36478F231EA8909C00F411A8 /* Category.swift in Sources */,
 				367E8D191EA88BA00083DE62 /* AppDelegate.swift in Sources */,
+				36B4BEED1EAF6AAD00E98DAE /* UtilAlertManagement.swift in Sources */,
 				36478F281EA8923E00F411A8 /* AppConstants.swift in Sources */,
 				36478F211EA88FC500F411A8 /* Budget.swift in Sources */,
 				367B62611EAE1A430066876E /* UtilValidation.swift in Sources */,

@@ -32,6 +32,10 @@ class NewBudgetVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         // Dispose of any resources that can be recreated.
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     @IBAction func cancelBudget(_ sender: Any) {
         nameField.text          = ""
         emailField.text         = ""
@@ -43,51 +47,6 @@ class NewBudgetVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
 
     @IBAction func saveBudget(_ sender: Any) {
         // Save in DB.
-        
-        if (nameField.text?.isEmpty)! {
-            print("This field can't be empty")
-            return
-        }
-        
-        if (emailField.text?.isEmpty)! {
-            print("This field can't be empty")
-            return
-        }
-        
-        if (phoneField.text?.isEmpty)! {
-            print("This field can't be empty")
-            return
-        }
-        
-        if (descriptionField.text?.isEmpty)! {
-            print("This field can't be empty")
-            return
-        }
-        
-        if (subcategoryField.text?.isEmpty)! {
-            print("This field can't be empty")
-            return
-        }
-        
-        if (locationField.text?.isEmpty)! {
-            print("This field can't be empty")
-            return
-        }
-        
-        if UtilValidation.fieldEmail(emailField.text!) {
-            print("Valid email")
-        }else{
-            print("Not valid email")
-            return
-        }
-        
-        if UtilValidation.fieldPhone(phoneField.text!) {
-            print("Valid phone")
-        }else{
-            print("Not valid phone")
-            return
-        }
-        
         let instanceAppSingleton = AppSingleton.sharedInstance
         instanceAppSingleton.budget.description     = descriptionField.text!
         instanceAppSingleton.budget.subcategory     = subcategoryField.text!
@@ -97,15 +56,15 @@ class NewBudgetVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         instanceAppSingleton.budget.location        = locationField.text!
         instanceAppSingleton.budget.actual_date     = Int(NSDate().timeIntervalSince1970)
         
-        BudgetDAO.instance.insertBudget(instanceAppSingleton.budget)
+        if UtilValidation.isBudgetValid(instanceAppSingleton.budget) {
+            BudgetDAO.instance.insertBudget(instanceAppSingleton.budget)
+        } else {
+            UtilAlertManagement.budgetIsNotValid(self)
+        }        
     }
     
     @IBAction func dismissKeyboard(_ sender: Any) {
         self.resignFirstResponder()
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
     }
     
     // MARK: Picker Delegates
