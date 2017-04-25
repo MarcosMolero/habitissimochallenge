@@ -23,6 +23,17 @@ class BudgetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "budgetDetailSegue", sender: instanceAppSingelton.listBudget[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let guest = segue.destination as! BudgetDetailVC
+//        
+//        guest.mickey = sender as! String
+//        https://www.youtube.com/watch?v=peSXZi_nxek
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

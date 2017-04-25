@@ -40,7 +40,7 @@ class UtilFileManagement {
             if (error != nil) {
                 print(error?.localizedDescription as Any)
             } else {
-                print("Your database copy successfully")
+                print("Your database copied successfully")
             }
         }
     }
