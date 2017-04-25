@@ -15,7 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        setupInfo()
+        setupDB()
+        
         return true
     }
 
@@ -41,6 +44,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func setupInfo() {
+        print("===========================")
+        print("DEVICE OS:           \((UIDevice.current.systemVersion as NSString).floatValue)")
+        print("DEVICE NAME:         \(UIDevice.current.systemName)")
+        print("DEVICE MODEL:        \(UIDevice.current.model)")
+        print("DEVICE PATH:         \(UtilFileManagement.getPath(AppConstants.appDatabase.LocalDatabaseNew))")
+        print("===========================")
+    }
+    
+    func setupDB() {
+        let newDatabase = AppConstants.appDatabase.LocalDatabaseNew
+        UtilFileManagement.copyFile(newDatabase as NSString)
+    }
 }
 

@@ -25,6 +25,8 @@
 		367E8D201EA88BA00083DE62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 367E8D1E1EA88BA00083DE62 /* Main.storyboard */; };
 		367E8D221EA88BA00083DE62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 367E8D211EA88BA00083DE62 /* Assets.xcassets */; };
 		367E8D251EA88BA00083DE62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 367E8D231EA88BA00083DE62 /* LaunchScreen.storyboard */; };
+		36B4BEEA1EAF2D3B00E98DAE /* database_v100_1.sql in Resources */ = {isa = PBXBuildFile; fileRef = 36B4BEE81EAF2D3B00E98DAE /* database_v100_1.sql */; };
+		36B4BEEB1EAF2D3B00E98DAE /* habitissimoDB_v100_1.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 36B4BEE91EAF2D3B00E98DAE /* habitissimoDB_v100_1.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		367E8D211EA88BA00083DE62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		367E8D241EA88BA00083DE62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		367E8D261EA88BA00083DE62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36B4BEE81EAF2D3B00E98DAE /* database_v100_1.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = database_v100_1.sql; sourceTree = "<group>"; };
+		36B4BEE91EAF2D3B00E98DAE /* habitissimoDB_v100_1.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = habitissimoDB_v100_1.sqlite; sourceTree = "<group>"; };
 		56102B726F0F538206343938 /* Pods-habitissimochallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-habitissimochallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-habitissimochallenge/Pods-habitissimochallenge.release.xcconfig"; sourceTree = "<group>"; };
 		998F98CC97EDD2DC8D47D317 /* Pods_habitissimochallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_habitissimochallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -150,6 +154,8 @@
 		36478F2F1EA893FC00F411A8 /* DB */ = {
 			isa = PBXGroup;
 			children = (
+				36B4BEE81EAF2D3B00E98DAE /* database_v100_1.sql */,
+				36B4BEE91EAF2D3B00E98DAE /* habitissimoDB_v100_1.sqlite */,
 			);
 			name = DB;
 			sourceTree = "<group>";
@@ -258,6 +264,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36B4BEEA1EAF2D3B00E98DAE /* database_v100_1.sql in Resources */,
+				36B4BEEB1EAF2D3B00E98DAE /* habitissimoDB_v100_1.sqlite in Resources */,
 				367E8D251EA88BA00083DE62 /* LaunchScreen.storyboard in Resources */,
 				367E8D221EA88BA00083DE62 /* Assets.xcassets in Resources */,
 				367E8D201EA88BA00083DE62 /* Main.storyboard in Resources */,

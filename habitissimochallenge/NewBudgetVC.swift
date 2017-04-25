@@ -74,18 +74,16 @@ class NewBudgetVC: UIViewController {
             print("Not valid")
         }
         
-        
-        let budget:Budget   = Budget()
-        budget.description  = descriptionField.text!
-        budget.subcategory  = subcategoryField.text!
-        budget.name         = nameField.text!
-        budget.email        = emailField.text!
-        budget.phone        = phoneField.text!
-        budget.localization = locationField.text!
-        
         let instanceAppSingleton = AppSingleton.sharedInstance
-        instanceAppSingleton.budget = budget
+        instanceAppSingleton.budget.description  = descriptionField.text!
+        instanceAppSingleton.budget.subcategory  = subcategoryField.text!
+        instanceAppSingleton.budget.name         = nameField.text!
+        instanceAppSingleton.budget.email        = emailField.text!
+        instanceAppSingleton.budget.phone        = phoneField.text!
+        instanceAppSingleton.budget.localization = locationField.text!
+        instanceAppSingleton.budget.actual_date  = Int(NSDate().timeIntervalSince1970)
         
+        BudgetDAO.instance.insertBudget(instanceAppSingleton.budget)
     }
     
     @IBAction func dismissKeyboard(_ sender: Any) {

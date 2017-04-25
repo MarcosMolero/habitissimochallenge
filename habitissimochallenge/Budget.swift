@@ -9,22 +9,24 @@
 import Foundation
 
 class Budget {
+    var id              :Int
     var description     :String
     var subcategory     :String
     var name            :String
     var email           :String
     var phone           :String
     var localization    :String
-    var date            :Int
+    var actual_date     :Int
     
     init() {
+        self.id             = Int()
         self.description    = String()
         self.subcategory    = String()
         self.name           = String()
         self.email          = String()
         self.phone          = String()
         self.localization   = String()
-        self.date           = Int()
+        self.actual_date    = Int()
         
     }
     

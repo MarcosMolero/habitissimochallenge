@@ -12,6 +12,8 @@ class AppConstants {
     
     struct DBHelper {
         static let TABLE_BUDGETS    :String = "BUDGETS"
+        static let id               :String = "id"
+        static let actual_date      :String = "actual_date"
         static let description      :String = "description"
         static let subcategory      :String = "subcategory"
         static let name             :String = "name"
@@ -22,7 +24,7 @@ class AppConstants {
     }
     
     struct appDatabase {
-        static let LocalDatabaseNew :String = "habitissimoDB.sqlite"
+        static let LocalDatabaseNew :String = "habitissimoDB_v100_1.sqlite"
         
     }
     
