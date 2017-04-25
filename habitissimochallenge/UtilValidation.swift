@@ -20,7 +20,7 @@ class UtilValidation {
     }
     
     static func fieldPhone(_ phone:String) -> Bool {
-        let phoneRegEx  = "^\\d{3}-\\d{3}-\\d{4}$"
+        let phoneRegEx  = "/^[9|6|7][0-9]{8}$/"
         
         let phoneTest   = NSPredicate(format: "SELF MATCHES %@", phoneRegEx)
         let result      = phoneTest.evaluate(with: phone)
