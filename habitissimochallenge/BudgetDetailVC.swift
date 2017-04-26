@@ -24,12 +24,14 @@ class BudgetDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameLabel.text          = budgetDetail.name
-        phoneLabel.text         = budgetDetail.phone
-        emailLabel.text         = budgetDetail.email
-        locationLabel.text      = budgetDetail.location
-        subcategoryLabel.text   = budgetDetail.subcategory
-        descriptionLabel.text   = budgetDetail.description
+        let instanceAppSingleton = AppSingleton.sharedInstance
+        
+        nameLabel.text          = instanceAppSingleton.budget.name
+        phoneLabel.text         = instanceAppSingleton.budget.phone
+        emailLabel.text         = instanceAppSingleton.budget.email
+        locationLabel.text      = instanceAppSingleton.budget.location
+        subcategoryLabel.text   = instanceAppSingleton.budget.subcategory
+        descriptionLabel.text   = instanceAppSingleton.budget.description
     }
     
     override func didReceiveMemoryWarning() {

@@ -27,15 +27,10 @@ class BudgetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "budgetDetailSegue", sender: instanceAppSingelton.listBudget[indexPath.row])
+        instanceAppSingelton.budget = instanceAppSingelton.listBudget[indexPath.row]
+        performSegue(withIdentifier: "budgetDetailSegue", sender: nil)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let guest = segue.destination as! BudgetDetailVC
-        guest.budgetDetail = sender as! Budget
-        
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
