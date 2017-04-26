@@ -66,7 +66,7 @@ class WebServiceCommunication {
                 case .success:
                     if ((response.response?.statusCode)! >= 200 && (response.response?.statusCode)! < 300) {
                         let jsonObject = JSON(data: response.data!)
-                        print(jsonObject)
+                        ParseJSON.parseLocations(jsonObject)
                     }
                     break
                 case .failure(let error):

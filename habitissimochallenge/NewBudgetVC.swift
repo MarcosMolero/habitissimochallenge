@@ -17,7 +17,7 @@ class NewBudgetVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     @IBOutlet weak var subcategoryField: UITextField!
     @IBOutlet weak var locationField: UITextField!
     
-    var pickOption = ["one", "two", "three", "seven", "fifteen"]
+    let instanceAppSingleton = AppSingleton.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +40,6 @@ class NewBudgetVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     }
 
     @IBAction func saveBudget(_ sender: Any) {
-        let instanceAppSingleton = AppSingleton.sharedInstance
         instanceAppSingleton.budget.description     = descriptionField.text!
         instanceAppSingleton.budget.subcategory     = subcategoryField.text!
         instanceAppSingleton.budget.name            = nameField.text!
@@ -76,15 +75,15 @@ class NewBudgetVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickOption.count
+        return instanceAppSingleton.listOfLocations.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickOption[row]
+        return instanceAppSingleton.listOfLocations[row].name
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        locationField.text = pickOption[row]
+        locationField.text = instanceAppSingleton.listOfLocations[row].name
     }
 
 }

@@ -33,6 +33,10 @@ class BudgetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let webServiceCommunication:WebServiceCommunication = WebServiceCommunication()
+        webServiceCommunication.getLocations()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

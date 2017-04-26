@@ -26,12 +26,12 @@ class BudgetDetailVC: UIViewController {
         
         let instanceAppSingleton = AppSingleton.sharedInstance
         
-        nameLabel.text          = instanceAppSingleton.budget.name
-        phoneLabel.text         = instanceAppSingleton.budget.phone
-        emailLabel.text         = instanceAppSingleton.budget.email
-        locationLabel.text      = instanceAppSingleton.budget.location
-        subcategoryLabel.text   = instanceAppSingleton.budget.subcategory
-        descriptionLabel.text   = instanceAppSingleton.budget.description
+        nameLabel.text          = "Name: " + instanceAppSingleton.budget.name
+        phoneLabel.text         = "Phone: " + instanceAppSingleton.budget.phone
+        emailLabel.text         = "Email: " + instanceAppSingleton.budget.email
+        locationLabel.text      = "Location: " + instanceAppSingleton.budget.location
+        subcategoryLabel.text   = "Subcategory: " + instanceAppSingleton.budget.subcategory
+        descriptionLabel.text   = "Description: " + instanceAppSingleton.budget.description
     }
     
     override func didReceiveMemoryWarning() {
