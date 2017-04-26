@@ -10,6 +10,8 @@ import UIKit
 
 class BudgetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var tableView: UITableView!
+    
     let instanceAppSingelton = AppSingleton.sharedInstance
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,7 +39,12 @@ class BudgetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         instanceAppSingelton.listBudget = BudgetDAO.instance.getBudgets()
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {

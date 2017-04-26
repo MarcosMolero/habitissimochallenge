@@ -29,7 +29,6 @@ class NewBudgetVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -37,16 +36,10 @@ class NewBudgetVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     }
     
     @IBAction func cancelBudget(_ sender: Any) {
-        nameField.text          = ""
-        emailField.text         = ""
-        phoneField.text         = ""
-        descriptionField.text   = ""
-        subcategoryField.text   = ""
-        locationField.text      = ""
+        clearFields()
     }
 
     @IBAction func saveBudget(_ sender: Any) {
-        // Save in DB.
         let instanceAppSingleton = AppSingleton.sharedInstance
         instanceAppSingleton.budget.description     = descriptionField.text!
         instanceAppSingleton.budget.subcategory     = subcategoryField.text!
@@ -58,6 +51,7 @@ class NewBudgetVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         
         if UtilValidation.isBudgetValid(instanceAppSingleton.budget) {
             BudgetDAO.instance.insertBudget(instanceAppSingleton.budget)
+            clearFields()
         } else {
             UtilAlertManagement.budgetIsNotValid(self)
         }        
@@ -65,6 +59,15 @@ class NewBudgetVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     
     @IBAction func dismissKeyboard(_ sender: Any) {
         self.resignFirstResponder()
+    }
+    
+    func clearFields() {
+        nameField.text          = ""
+        emailField.text         = ""
+        phoneField.text         = ""
+        descriptionField.text   = ""
+        subcategoryField.text   = ""
+        locationField.text      = ""
     }
     
     // MARK: Picker Delegates

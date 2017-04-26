@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5AV-zG-N4O" id="As7-75-lXu">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -50,6 +50,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="My Budgets" id="ayd-JY-zGa"/>
                     <connections>
+                        <outlet property="tableView" destination="UaU-WV-Fr9" id="ptr-6o-3DK"/>
                         <segue destination="6nt-Ud-Rtg" kind="show" identifier="budgetDetailSegue" id="kFV-9P-6x7"/>
                     </connections>
                 </viewController>
