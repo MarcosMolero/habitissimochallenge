@@ -14,6 +14,7 @@ class BudgetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let instanceAppSingelton = AppSingleton.sharedInstance
     
+    // MARK: TableView Delegates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return instanceAppSingelton.listBudget.count
     }
@@ -33,10 +34,8 @@ class BudgetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let webServiceCommunication:WebServiceCommunication = WebServiceCommunication()
         webServiceCommunication.getLocations()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,9 +46,6 @@ class BudgetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
     }
-
-
 }
 

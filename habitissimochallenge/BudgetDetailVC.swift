@@ -11,15 +11,12 @@ import UIKit
 
 class BudgetDetailVC: UIViewController {
     
-    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var subcategoryLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
-    var budgetDetail    :Budget = Budget()
     
     override func viewDidLoad() {
         super.viewDidLoad()
