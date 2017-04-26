@@ -31,10 +31,9 @@ class BudgetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let guest = segue.destination as! BudgetDetailVC
-//        
-//        guest.mickey = sender as! String
-//        https://www.youtube.com/watch?v=peSXZi_nxek
+        let guest = segue.destination as! BudgetDetailVC
+        guest.budgetDetail = sender as! Budget
+        
     }
 
     override func viewDidLoad() {
