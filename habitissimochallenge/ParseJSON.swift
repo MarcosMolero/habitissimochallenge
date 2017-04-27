@@ -28,6 +28,38 @@ class ParseJSON {
             
             instanceAppSingleton.listOfLocations.append(location)
         }
+    }
+    
+    static func parseCategory(_ jsonObject:JSON) {
+        let instanceAppSingleton = AppSingleton.sharedInstance
+        
+        for item in jsonObject.arrayValue {
+            let category            :Category = Category()
+            category.id             = item["id"].stringValue
+            category.parent_id      = item["parent_id"].stringValue
+            category.name           = item["name"].stringValue
+            category.description    = item["description"].stringValue
+            category.child_count    = item["children_count"].intValue
+            category.children       = item["children"].stringValue
+            category.slug           = item["slug"].stringValue
+            instanceAppSingleton.listOfCategory.append(category)
+        }
+    }
+    
+    static func parseSubcategory(_ jsonObject:JSON) {
+        let instanceAppSingleton = AppSingleton.sharedInstance
 
+        for item in jsonObject.arrayValue {
+            let category            :Category = Category()
+            category.id             = item["id"].stringValue
+            category.parent_id      = item["parent_id"].stringValue
+            category.name           = item["name"].stringValue
+            category.description    = item["description"].stringValue
+            category.child_count    = item["children_count"].intValue
+            category.children       = item["children"].stringValue
+            category.slug           = item["slug"].stringValue
+            instanceAppSingleton.listOfSubcategory.append(category)
+        }
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: subcategoryOk), object: self)
     }
 }

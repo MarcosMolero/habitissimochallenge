@@ -12,14 +12,17 @@ class AppSingleton {
 
     static let sharedInstance: AppSingleton = AppSingleton()
 
-    var budget          :Budget
-    var listBudget      :[Budget]
-    var listOfLocations :[Locations]
+    var budget              :Budget
+    var listBudget          :[Budget]
+    var listOfLocations     :[Locations]
+    var listOfCategory      :[Category]
+    var listOfSubcategory   :[Category]
     
     init() {
         self.budget             = Budget()
         self.listBudget         = [Budget]()
         self.listOfLocations    = [Locations]()
-        
+        self.listOfCategory     = [Category]()
+        self.listOfSubcategory  = [Category]()
     }
 }

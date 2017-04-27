@@ -5,6 +5,7 @@
 //  Created by Marcos Molero on 20/4/17.
 //  Copyright © 2017 marcosmolero. All rights reserved.
 //
+//  iOS Tab Bar Icons provided by iconbeast.com/free/ 
 
 import UIKit
 
@@ -36,6 +37,7 @@ class BudgetsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         let webServiceCommunication:WebServiceCommunication = WebServiceCommunication()
         webServiceCommunication.getLocations()
+        webServiceCommunication.getCategories()
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -16,15 +16,19 @@ class NewBudgetVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     @IBOutlet weak var descriptionField: UITextField!
     @IBOutlet weak var subcategoryField: UITextField!
     @IBOutlet weak var locationField: UITextField!
+    @IBOutlet weak var categoryField: UITextField!
     
-    let instanceAppSingleton = AppSingleton.sharedInstance
-    
+    let instanceAppSingleton    = AppSingleton.sharedInstance
+    let utilActivityIndicator   :UtilActivityIndicator = UtilActivityIndicator()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let pickerView          :UIPickerView = UIPickerView()
-        pickerView.delegate     = self
-        locationField.inputView = pickerView
+        let pickerView :UIPickerView = UIPickerView()
+        pickerView.delegate         = self
+        locationField.inputView     = pickerView
+        categoryField.inputView     = pickerView
+        subcategoryField.inputView  = pickerView
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,8 +70,14 @@ class NewBudgetVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         emailField.text         = ""
         phoneField.text         = ""
         descriptionField.text   = ""
+        categoryField.text      = ""
         subcategoryField.text   = ""
         locationField.text      = ""
+    }
+    
+    func loadSubcategory() {
+        NotificationCenter.default.removeObserver(self,name:NSNotification.Name(rawValue: subcategoryOk),object: nil)
+        utilActivityIndicator.stopActivityIndicator(utilActivityIndicator.actInd)
     }
     
     // MARK: Picker Delegates
@@ -76,15 +86,54 @@ class NewBudgetVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return instanceAppSingleton.listOfLocations.count
+        if locationField.isEditing {
+            return instanceAppSingleton.listOfLocations.count
+        }
+        
+        if categoryField.isEditing {
+            return instanceAppSingleton.listOfCategory.count
+        }
+        
+        if subcategoryField.isEditing {
+            return instanceAppSingleton.listOfSubcategory.count
+        }
+        
+        return 0
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return instanceAppSingleton.listOfLocations[row].name
+        if locationField.isEditing {
+            return instanceAppSingleton.listOfLocations[row].name
+        }
+        
+        if categoryField.isEditing {
+            return instanceAppSingleton.listOfCategory[row].name
+        }
+        
+        if subcategoryField.isEditing {
+            return instanceAppSingleton.listOfSubcategory[row].name
+        }
+        return nil
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        locationField.text = instanceAppSingleton.listOfLocations[row].name
+        if locationField.isEditing {
+            locationField.text = instanceAppSingleton.listOfLocations[row].name
+        }
+        
+        if categoryField.isEditing {
+            NotificationCenter.default.addObserver(self, selector: #selector(NewBudgetVC.loadSubcategory), name: NSNotification.Name(rawValue: subcategoryOk), object: nil)
+
+            categoryField.text = instanceAppSingleton.listOfCategory[row].name
+            
+            utilActivityIndicator.startActivityIndicator(utilActivityIndicator.showActivityIndicator(view))
+            let webServiceCommunication :WebServiceCommunication = WebServiceCommunication()
+            webServiceCommunication.getSubcategory(instanceAppSingleton.listOfCategory[row].id)
+        }
+        
+        if subcategoryField.isEditing {
+            subcategoryField.text = instanceAppSingleton.listOfSubcategory[row].name
+        }
     }
 
 }

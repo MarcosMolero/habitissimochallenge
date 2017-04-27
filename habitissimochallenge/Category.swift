@@ -13,7 +13,7 @@ class Category {
     var parent_id   :String
     var name        :String
     var description :String
-    var child_count :String
+    var child_count :Int
     var children    :String
     var slug        :String
     
@@ -22,7 +22,7 @@ class Category {
         self.parent_id      = String()
         self.name           = String()
         self.description    = String()
-        self.child_count    = String()
+        self.child_count    = Int()
         self.children       = String()
         self.slug           = String()
         

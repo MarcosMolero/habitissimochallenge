@@ -17,6 +17,7 @@
 		36478F321EA894BF00F411A8 /* BudgetDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36478F311EA894BF00F411A8 /* BudgetDAO.swift */; };
 		36478F341EA894CB00F411A8 /* CategoryDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36478F331EA894CB00F411A8 /* CategoryDAO.swift */; };
 		36478F361EA894D600F411A8 /* LocationsDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36478F351EA894D600F411A8 /* LocationsDAO.swift */; };
+		3656DCB91EB1D33D006244B1 /* UtilActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3656DCB81EB1D33D006244B1 /* UtilActivityIndicator.swift */; };
 		367B62611EAE1A430066876E /* UtilValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367B62601EAE1A430066876E /* UtilValidation.swift */; };
 		367B62631EAE23B60066876E /* UtilFileManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367B62621EAE23B60066876E /* UtilFileManagement.swift */; };
 		367E8D191EA88BA00083DE62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367E8D181EA88BA00083DE62 /* AppDelegate.swift */; };
@@ -43,6 +44,7 @@
 		36478F311EA894BF00F411A8 /* BudgetDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BudgetDAO.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		36478F331EA894CB00F411A8 /* CategoryDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDAO.swift; sourceTree = "<group>"; };
 		36478F351EA894D600F411A8 /* LocationsDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDAO.swift; sourceTree = "<group>"; };
+		3656DCB81EB1D33D006244B1 /* UtilActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilActivityIndicator.swift; sourceTree = "<group>"; };
 		367B62601EAE1A430066876E /* UtilValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilValidation.swift; sourceTree = "<group>"; };
 		367B62621EAE23B60066876E /* UtilFileManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilFileManagement.swift; sourceTree = "<group>"; };
 		367E8D151EA88BA00083DE62 /* habitissimochallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = habitissimochallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +140,7 @@
 				367B62601EAE1A430066876E /* UtilValidation.swift */,
 				367B62621EAE23B60066876E /* UtilFileManagement.swift */,
 				36B4BEEC1EAF6AAD00E98DAE /* UtilAlertManagement.swift */,
+				3656DCB81EB1D33D006244B1 /* UtilActivityIndicator.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				36478F321EA894BF00F411A8 /* BudgetDAO.swift in Sources */,
 				367E8D1D1EA88BA00083DE62 /* NewBudgetVC.swift in Sources */,
 				36478F231EA8909C00F411A8 /* Category.swift in Sources */,
+				3656DCB91EB1D33D006244B1 /* UtilActivityIndicator.swift in Sources */,
 				36D9974C1EB0A30400341D4C /* ParseJSON.swift in Sources */,
 				367E8D191EA88BA00083DE62 /* AppDelegate.swift in Sources */,
 				36B4BEED1EAF6AAD00E98DAE /* UtilAlertManagement.swift in Sources */,
