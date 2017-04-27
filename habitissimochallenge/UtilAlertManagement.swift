@@ -11,10 +11,22 @@ import UIKit
 
 class UtilAlertManagement {
     
-    static func budgetIsNotValid(_ actualViewController: UIViewController) {
+    static func budgetNotValid(_ actualViewController: UIViewController) {
         
         let alert = UIAlertController(  title: "ALERT",
                                         message: "Fields are empty or not valid format",
+                                        preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(  title: "I Agree",
+                                        style: UIAlertActionStyle.default,
+                                        handler: nil))
+        
+        actualViewController.present(alert, animated: true, completion:nil)
+    }
+    
+    static func budgetSaved(_ actualViewController: UIViewController) {
+        let alert = UIAlertController(  title: "CONGRATULATIONS",
+                                        message: "Your budget has been saved",
                                         preferredStyle: UIAlertControllerStyle.alert)
         
         alert.addAction(UIAlertAction(  title: "I Agree",

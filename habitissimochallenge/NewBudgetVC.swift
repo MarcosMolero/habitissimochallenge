@@ -50,9 +50,10 @@ class NewBudgetVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         
         if UtilValidation.isBudgetValid(instanceAppSingleton.budget) {
             BudgetDAO.instance.insertBudget(instanceAppSingleton.budget)
+            UtilAlertManagement.budgetSaved(self)
             clearFields()
         } else {
-            UtilAlertManagement.budgetIsNotValid(self)
+            UtilAlertManagement.budgetNotValid(self)
         }        
     }
     
