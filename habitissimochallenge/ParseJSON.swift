@@ -48,7 +48,8 @@ class ParseJSON {
     
     static func parseSubcategory(_ jsonObject:JSON) {
         let instanceAppSingleton = AppSingleton.sharedInstance
-
+        instanceAppSingleton.resetSubcategory()
+        
         for item in jsonObject.arrayValue {
             let category            :Category = Category()
             category.id             = item["id"].stringValue

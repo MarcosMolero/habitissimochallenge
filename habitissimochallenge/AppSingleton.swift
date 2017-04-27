@@ -25,4 +25,8 @@ class AppSingleton {
         self.listOfCategory     = [Category]()
         self.listOfSubcategory  = [Category]()
     }
+    
+    func resetSubcategory() {
+        self.listOfSubcategory = [Category]()
+    }
 }

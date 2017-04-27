@@ -14,7 +14,7 @@ class UtilAlertManagement {
     static func budgetNotValid(_ actualViewController: UIViewController) {
         
         let alert = UIAlertController(  title: "ALERT",
-                                        message: "Fields are empty or not valid format",
+                                        message: "Fields are empty or not in a valid format",
                                         preferredStyle: UIAlertControllerStyle.alert)
         
         alert.addAction(UIAlertAction(  title: "I Agree",
@@ -25,7 +25,7 @@ class UtilAlertManagement {
     }
     
     static func budgetSaved(_ actualViewController: UIViewController) {
-        let alert = UIAlertController(  title: "CONGRATULATIONS",
+        let alert = UIAlertController(  title: "SAVED",
                                         message: "Your budget has been saved",
                                         preferredStyle: UIAlertControllerStyle.alert)
         
